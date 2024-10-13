@@ -5,16 +5,21 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+
+
 public class ZipperTest {
   Zipper zipper;
+
   @BeforeEach
   void setUp() {
     zipper = new Zipper();
   }
+
   @Test
   void itWorks() {
     assertEquals(true, true);
   }
+
     @Test
     void testzipwithintegers() {
         List<Integer> list1 = List.of(1, 3,5);
@@ -23,6 +28,7 @@ public class ZipperTest {
         List<Integer> result = zipper.zip(list1, list2);
         assertEquals(expected, result);
     }
+
     @Test
     void testzipwithstrings() {
         List<String> list1 = List.of("Red", "Yellow", "Blue");
@@ -40,6 +46,7 @@ public class ZipperTest {
         List<Integer> result = zipper.zip(list1, list2);
         assertEquals(expected, result);
     }
+
     @Test
     void testzipwithonelist() {
         List<Integer> list1 = List.of(1, 2);
@@ -48,6 +55,7 @@ public class ZipperTest {
         List<Integer> result = zipper.zip(list1, list2);
         assertEquals(expected, result);
     }
+
     @Test
     void testzipwithoutlists() {
         List<Integer> list1 = List.of();
